@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <!--https://github.com/Abhay557/Will-you-be-my-Valentine-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,24 +73,24 @@
         <button id="yesButton">Yes</button>
         <button id="noButton">No</button>
     </div>
-    
     <div class="modal-overlay" id="modalOverlay"></div>
     <div class="modal" id="modal">
-        <p>I hate you</p>
+        <p id="modalText"></p>
         <button onclick="closeModal()">Close</button>
     </div>
-
+    
     <script>
         let noCount = 0;
         const yesButton = document.getElementById("yesButton");
         const noButton = document.getElementById("noButton");
         const modal = document.getElementById("modal");
         const modalOverlay = document.getElementById("modalOverlay");
-
+        const modalText = document.getElementById("modalText");
+    
         noButton.addEventListener("click", () => {
             noCount++;
             if (noCount >= 5) {
-                openModal();
+                openModal("I hate you");
                 return;
             }
             
@@ -99,19 +98,23 @@
             let currentSize = parseInt(window.getComputedStyle(yesButton).fontSize);
             yesButton.style.fontSize = (currentSize + 50) + "px";
             yesButton.style.padding = (parseInt(yesButton.style.padding || 10) + 5) + "px";
-
-
+    
             // Move No button to random position
             noButton.style.position = "absolute";
             noButton.style.left = Math.random() * (window.innerWidth - 100) + "px";
             noButton.style.top = Math.random() * (window.innerHeight - 50) + "px";
         });
-
-        function openModal() {
+    
+        yesButton.addEventListener("click", () => {
+            openModal("I love you");
+        });
+    
+        function openModal(message) {
+            modalText.textContent = message;
             modal.style.display = "block";
             modalOverlay.style.display = "block";
         }
-
+    
         function closeModal() {
             modal.style.display = "none";
             modalOverlay.style.display = "none";
@@ -119,3 +122,4 @@
     </script>
 </body>
 </html>
+
