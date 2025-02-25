@@ -15,9 +15,6 @@
             background-color: pink;
             font-family: 'Arial', sans-serif;
         }
-        h1 {
-            color : #F44336;
-        }
         .button-container {
             display: flex;
             gap: 20px;
@@ -121,13 +118,13 @@
         noButton.addEventListener("click", () => {
             noCount++;
             if (noCount >= 5) {
-                openModal("I hate you");
+                openModal("Pookie Stop! I love you!");
                 return;
             }
             
             // Increase Yes button size
             let currentSize = parseInt(window.getComputedStyle(yesButton).fontSize);
-            yesButton.style.fontSize = (currentSize + 50) + "px";
+            yesButton.style.fontSize = (currentSize + 75) + "px";
             yesButton.style.padding = (parseInt(yesButton.style.padding || 10) + 5) + "px";
 
             // Change No button text
