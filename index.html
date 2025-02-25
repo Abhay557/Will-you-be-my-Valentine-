@@ -88,8 +88,17 @@
 
         .gif-container {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 300px;
             height: 300px;
+        }
+
+        .gif-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -108,13 +117,10 @@
         <button onclick="closeModal()">Close</button>
     </div>
 
+ <!-- GIF added here -->
     <div class="gif-container">
-        <div class="tenor-gif-embed" data-postid="4784938373231258767" data-share-method="host" data-aspect-ratio="1.02564" data-width="100%">
-            <a href="https://tenor.com/view/cute-gif-4784938373231258767">Cute Sticker</a> from 
-            <a href="https://tenor.com/search/cute-stickers">Cute Stickers</a>
-        </div>
+        <img src="cute.gif" alt="Cute GIF">
     </div>
-    <script async src="https://tenor.com/embed.js"></script>
 
     <script>
         let noCount = 0;
