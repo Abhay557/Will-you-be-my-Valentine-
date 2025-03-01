@@ -51,11 +51,6 @@ A fun and interactive webpage that asks the girl to be your Valentine.
 2. Open `index.html` in any modern browser.
 3. Have fun! 🎉
 
-## Possible Improvements 🛠️
-
-- Add sound effects when buttons are clicked.
-- Enhance animations with CSS keyframes.
-- Save responses using local storage.
 
 ## Technologies Used 🖥️
 
